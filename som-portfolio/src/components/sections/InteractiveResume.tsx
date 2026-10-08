@@ -47,58 +47,56 @@ const InteractiveResume = () => {
 
   const workExperiences: Experience[] = [
     {
+      id: 'amazon',
+      title: 'Software Engineering Intern',
+      company: 'Amazon',
+      location: 'Seattle, WA',
+      period: 'Jun 2026 – Aug 2026',
+      achievements: [
+        'Automated on-call access to service team resources, driving more than 50% adoption across internal operations teams',
+        'Reduced manual approvals for administrators by processing permission team updates asynchronously with AWS SQS',
+        'Tightened access control by automatically removing permissions for engineers who rotate off-call using AWS Lambda'
+      ],
+      technologies: ['AWS', 'AWS SQS', 'AWS Lambda', 'Python'],
+    },
+    {
+      id: 'microsoft',
+      title: 'Software Engineering Intern',
+      company: 'Microsoft',
+      location: 'Redmond, WA',
+      period: 'Jan 2026 – May 2026',
+      achievements: [
+        'Built a .NET MCP server powering the M365 Admin Agent to expose Agent 365 observability data for enterprise workflows',
+        'Designed 50+ eval scenarios to test MCP tool selection and response quality, reducing risk before production rollout',
+        'Implemented internal ingestion tooling for 500K+ agents observability data, enabling production-scale load testing'
+      ],
+      technologies: ['.NET', 'C#', 'MCP', 'Azure'],
+    },
+    {
       id: 'nail',
       title: 'Research Assistant',
       company: 'Northeastern Autonomy & Intelligence Lab',
       location: 'Boston, MA',
-      period: 'Apr 2025 – Present',
+      period: 'Apr 2025 – Dec 2025',
       achievements: [
-        'Developed a Dockerized Angular-Flask app to extract and analyze ROS2 sensor data, cutting download sizes by 75%',
+        'Developed a Python data-processing pipeline to extract and analyze ROS2 sensor data, cutting download sizes by 75%',
         'Deployed an Ubuntu server with DAS to store 100+ TB of sensor data, reducing infrastructure costs by $2000+/month',
         'Configured Cloudflare Tunnel and Access to securely expose app via HTTPS to remote users with Northeastern credentials'
       ],
-      technologies: ['Angular', 'Flask', 'Docker', 'Python', 'ROS2', 'Ubuntu', 'Cloudflare'],
-      links: [{ label: 'Lab Website', url: '#' }]
-    },
-    {
-      id: 'ner',
-      title: 'Software Developer',
-      company: 'Northeastern Electric Racing',
-      location: 'Boston, MA',
-      period: 'Sep 2024 – Jan 2025',
-      achievements: [
-        'Built Angular dashboard to visualize real-time car telemetry data (e.g. battery temp), aiding engineers during testing',
-        'Simulated live data streams to validate frontend responsiveness under test-driving conditions before track deployment'
-      ],
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'Chart.js', 'WebSocket'],
-      links: [{ label: 'Team Website', url: '#' }]
+      technologies: ['Python', 'ROS2', 'Ubuntu', 'Cloudflare'],
     },
     {
       id: 'bambala',
-      title: 'Web Developer',
-      company: 'Bambala',
+      title: 'Software Engineering Intern',
+      company: 'Bambala (Startup)',
       location: 'East Brunswick, NJ',
       period: 'Jan 2023 – Sep 2024',
       achievements: [
-        'Developed JavaScript backend on Google App Engine to integrate digital payments, boosting transaction reliability by 25%',
-        'Enabled OAuth login via Google, Facebook, and Apple to simplify multi-platform authentication and user onboarding',
-        'Built Cypress test suite to automate UI validation, cut QA time by 50%, and ensure stable deployments in production',
-        'Refactored Angular codebase using NgRx, improving maintainability and reducing state management bugs by 30%'
+        'Developed REST APIs on Google App Engine to integrate digital payments, boosting transaction reliability by 25%',
+        'Built a Cypress automated testing framework, cutting QA time by 50%, and ensuring stable deployments in production',
+        'Refactored Angular codebase using the NgRx state design pattern, enhancing maintainability and cutting state bugs by 30%'
       ],
-      technologies: ['JavaScript', 'Angular', 'Google App Engine', 'Cypress', 'NgRx', 'OAuth'],
-    },
-    {
-      id: 'astraea',
-      title: 'Programming Chief',
-      company: 'Astraea Robotics – FRC Robotics',
-      location: 'East Brunswick, NJ',
-      period: 'Sep 2022 – Jun 2024',
-      achievements: [
-        'Mentored 10+ students in FRC programming with Java and Git, improving team development speed and code quality',
-        'Programmed custom omnidirectional drive wheels and simulations, increasing robot speed by 50% during competitions',
-        'Demonstrated autonomous routines at STEM outreach events, engaging over 250+ attendees to real-world robotics'
-      ],
-      technologies: ['Java', 'Git', 'FRC Programming', 'Robotics'],
+      technologies: ['JavaScript', 'Angular', 'Google App Engine', 'Cypress', 'NgRx'],
     }
   ];
 
@@ -109,11 +107,11 @@ const InteractiveResume = () => {
       subtitle: 'Software Developer',
       period: 'Aug 2025 – Present',
       achievements: [
-        'Built a stock screener with Python, Pandas, and Scikit-learn to analyze 20 years of 10-K\'s and macro data',
-        'Trained ML models on all S&P 500 firms\' forecasting fundamental business valuation metrics to enhance stock ranking',
-        'Backtested factor models on predicted EBIT/EV, with a long portfolio generating ~15% annualized return, beating the S&P'
+        'Developed an equity research screener with Python, Pandas, and Scikit-learn to analyze 20 years of 10-K\'s and macro data',
+        'Trained regression models on all 500 S&P firms\', forecasting fundamental business valuation metrics to rank stocks',
+        'Backtested factor models on predicted EBIT/EV, with a long portfolio having ~15% annualized return, beating the S&P 500'
       ],
-      technologies: ['Python', 'Pandas', 'Scikit-learn', 'NumPy', 'Financial Modeling'],
+      technologies: ['Python', 'matplotlib', 'scikit-learn', 'Excel'],
       links: [{ label: 'GitHub', url: '#' }]
     },
     {
@@ -122,16 +120,16 @@ const InteractiveResume = () => {
       subtitle: 'Software Developer',
       period: 'May 2025 – Present',
       achievements: [
-        'Designed a Node.js engine to automate selling weekly options and buying monthly hedges, aiming for defined-risk income',
-        'Integrated Zerodha Kite Connect API to fetch market data, execute trades, and manage option positions in real-time',
-        'Built a mock stock market using JavaScript to simulate execution flow and validate delta-based adjustment logic'
+        'Engineered an automated derivatives trading system executing delta-hedged option strategies with Python and Next.js',
+        'Integrated Zerodha API for real-time option chain data, trade execution, and P&L monitoring across weekly/monthly expiries',
+        'Simulated order book and position adjustments to validate risk management logic and streamline workflow automation'
       ],
-      technologies: ['Node.js', 'JavaScript', 'Zerodha API', 'Options Trading', 'React'],
+      technologies: ['Python', 'Flask', 'Next.js'],
       links: [{ label: 'GitHub', url: '#' }]
     },
     {
       id: 'nutrition',
-      title: 'Nutrition',
+      title: 'NUtrition',
       subtitle: 'Software Developer',
       period: 'Jan 2025 – Apr 2025',
       achievements: [
@@ -139,7 +137,7 @@ const InteractiveResume = () => {
         'Implemented a Python-based ML model to recommend meals aligned with users\' goals, preferences, and dining history',
         'Coordinated with Northeastern dining services to pilot the app and collect live feedback from students in dining halls'
       ],
-      technologies: ['React', 'Python', 'Supabase', 'Vercel', 'Machine Learning'],
+      technologies: ['Python', 'scikit-learn', 'Selenium', 'React.js', 'Supabase'],
     }
   ];
 
@@ -150,41 +148,43 @@ const InteractiveResume = () => {
     { name: 'JavaScript', level: 90, category: 'languages' },
     { name: 'Java', level: 75, category: 'languages' },
     { name: 'C++', level: 70, category: 'languages' },
-    
+    { name: 'C#', level: 70, category: 'languages' },
+    { name: 'HTML', level: 90, category: 'languages' },
+    { name: 'CSS', level: 85, category: 'languages' },
+    { name: 'SQL', level: 80, category: 'languages' },
+
     // Frameworks & Libraries
-    { name: 'Flask', level: 80, category: 'frameworks' },
     { name: 'NumPy', level: 85, category: 'frameworks' },
     { name: 'Pandas', level: 90, category: 'frameworks' },
+    { name: 'Scikit-learn', level: 80, category: 'frameworks' },
+    { name: 'Flask', level: 80, category: 'frameworks' },
     { name: 'Selenium', level: 75, category: 'frameworks' },
     { name: 'Angular', level: 85, category: 'frameworks' },
     { name: 'React.js', level: 80, category: 'frameworks' },
     { name: 'Next.js', level: 75, category: 'frameworks' },
     { name: 'Node.js', level: 80, category: 'frameworks' },
-    { name: 'Express.js', level: 75, category: 'frameworks' },
     { name: 'Prisma', level: 70, category: 'frameworks' },
-    { name: 'NgRx', level: 70, category: 'frameworks' },
-    
+
     // Services & Tools
     { name: 'Git', level: 85, category: 'services' },
-    { name: 'GitHub', level: 85, category: 'services' },
     { name: 'Jira', level: 75, category: 'services' },
     { name: 'Docker', level: 80, category: 'services' },
     { name: 'Google Cloud Platform', level: 75, category: 'services' },
-    { name: 'Firebase', level: 80, category: 'services' },
-    { name: 'Supabase', level: 75, category: 'services' },
-    { name: 'Postman', level: 80, category: 'services' },
+    { name: 'Azure', level: 75, category: 'services' },
+    { name: 'AWS', level: 75, category: 'services' },
     { name: 'Figma', level: 70, category: 'services' },
-    { name: 'Vercel', level: 75, category: 'services' },
-    { name: 'VS Code', level: 90, category: 'services' },
-    
+
     // Interests
     { name: 'Financial Derivatives', level: 85, category: 'interests' },
     { name: 'Fitness', level: 80, category: 'interests' },
     { name: 'Tennis', level: 75, category: 'interests' },
     { name: 'Pickleball', level: 70, category: 'interests' },
     { name: 'Basketball', level: 75, category: 'interests' },
+    { name: 'Football', level: 75, category: 'interests' },
     { name: 'Cricket', level: 80, category: 'interests' },
-    { name: 'Journaling', level: 85, category: 'interests' }
+    { name: 'Journaling', level: 85, category: 'interests' },
+    { name: 'Cooking', level: 75, category: 'interests' },
+    { name: 'Podcasts', level: 80, category: 'interests' }
   ];
 
   const education = {
@@ -194,9 +194,9 @@ const InteractiveResume = () => {
     period: 'Dec 2027',
     gpa: 'GPA: 3.9/4.0',
     relevantCourses: [
-      'Data Structures & Algorithms', 'Object-Oriented Design', 'Artificial Intelligence',
-      'Discrete Structures', 'Statistics & Stochastic Processes', 'Differential Equations',
-      'Linear Algebra', 'Multivariable Calculus'
+      'Statistics & Stochastic Processes', 'Differential Equations', 'Linear Algebra',
+      'Artificial Intelligence', 'Multivariable Calculus', 'Data Structures & Algorithms',
+      'Object-Oriented Design'
     ]
   };
 
